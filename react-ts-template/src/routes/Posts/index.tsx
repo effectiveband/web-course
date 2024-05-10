@@ -1,10 +1,15 @@
 import { useEffect, FC } from 'react';
 import { observer } from 'mobx-react-lite';
 
+// Hooks
+import { useTranslation } from 'react-i18next';
+
 // Stores
 import postsStore from 'stores/PostsStore';
 
 const Posts: FC = () => {
+  const { t } = useTranslation();
+
   const { posts, loading } = postsStore;
 
   useEffect(() => {
@@ -13,7 +18,7 @@ const Posts: FC = () => {
 
   return (
     <div>
-      {loading ? 'Loading...' : null}
+      {loading ? `${t('Loading')}..` : null}
       {posts.map((post) => (
         <div key={post.id}>{post.title}</div>
       ))}

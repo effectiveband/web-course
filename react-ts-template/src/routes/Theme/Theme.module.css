@@ -1,0 +1,7 @@
+.text {
+  color: var(--color-text);
+}
+
+.background {
+  background-color: var(--color-bg);
+}

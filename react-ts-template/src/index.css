@@ -1,0 +1,10 @@
+body,
+body[data-theme='light'] {
+  --color-text: #000;
+  --color-bg: #fff;
+}
+
+body[data-theme='dark'] {
+  --color-text: #fff;
+  --color-bg: #000;
+}
